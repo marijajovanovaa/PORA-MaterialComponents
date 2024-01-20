@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ButtonStyle">
+        <item name="android:background">@drawable/button_background</item>
+        <item name="iconTint">@color/myColorLight</item>
+    </style>
+
+    <style name="AlertDialogCustom" parent="@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="colorAccent">@color/myColorLight</item>
+    </style>
+
+    <style name="ButtonStyleBar" parent="Widget.Material3.Button.TextButton">
+        <item name="backgroundTint">@color/onMyColorContainerLightMild</item>
+        <item name="iconTint">@color/myColorLight</item>
+        <item name="rippleColor">@color/onMyColorDarkOpacity</item>
+        <item name="iconGravity">textStart</item>
+    </style>
+
+    <style name="FABStyleExtended" parent="Widget.Material3.ExtendedFloatingActionButton.Icon.Primary">
+        <item name="backgroundTint">@color/onMyColorContainerLightMild</item>
+        <item name="iconTint">@color/myColorLight</item>
+    </style>
+
+
+    <style name="FABStyle" parent="Widget.Material3.FloatingActionButton.Primary">
+        <item name="backgroundTint">@color/onMyColorContainerLightMild</item>
+        <item name="tint">@color/myColorLight</item>
+    </style>
+
+    <style name="DatePickerStyle" parent="ThemeOverlay.MaterialComponents.MaterialCalendar">
+        <item name="colorPrimary">@color/myColorLight</item>
+
+    </style>
+
+    <style name="Widget.MaterialComponents.MaterialCalendar.Custom" parent="Widget.MaterialComponents.MaterialCalendar">
+        <item name="android:textColorPrimary">@color/myColorLight</item>
+    </style>
+
+
+</resources>

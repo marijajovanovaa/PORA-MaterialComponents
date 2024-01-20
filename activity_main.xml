@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/onMyColorLight"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom"
+        app:backgroundTint="@color/onMyColorContainerLightMild"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/displayWishlist"
+                style="@style/ButtonStyleBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/wishlist_button"
+                app:icon="@drawable/baseline_list_24"
+                app:iconSize="50dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/displayStoresList"
+                style="@style/ButtonStyleBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/stores_list_button"
+                android:layout_marginStart="35dp"
+                app:icon="@drawable/baseline_shopping_bag_24"
+                app:iconSize="45dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/displayMap"
+                style="@style/ButtonStyleBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/map_button"
+                android:layout_marginStart="35dp"
+                app:icon="@drawable/baseline_travel_explore_24"
+                app:iconSize="40dp"/>
+        </LinearLayout>
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/storeCard"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true"
+    android:clickable="false"
+    android:focusable="false">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:clickable="true"
+        android:background="@color/onMyColorContainerLightMild"
+        android:focusable="true">
+
+
+        <ImageView
+            android:id="@+id/storeImageView"
+            android:layout_width="350dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.207" />
+
+        <TextView
+            android:id="@+id/storeNameView"
+            android:layout_width="335dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/name"
+            android:textColor="@color/myColorLight"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guideline" />
+
+        <TextView
+            android:id="@+id/addressView"
+            android:layout_width="206dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/storeNameView"
+            android:text="address"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/chipsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/addressView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/inStoreShoppingChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Store Shopping"
+                android:textSize="12sp"
+                android:layout_marginEnd="5dp"
+                app:chipIcon="@drawable/baseline_add_shopping_cart_24"
+                app:chipBackgroundColor="@color/onMyColorChip" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/inStorePickupChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Store Pickup"
+                android:textSize="12sp"
+                app:chipIcon="@drawable/baseline_shopping_bag_24"
+                app:chipBackgroundColor="@color/onMyColorChip" />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.55" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

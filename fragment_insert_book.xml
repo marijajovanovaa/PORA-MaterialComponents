@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/onMyColorLight">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/bookNameInput"
+        android:layout_width="260dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="60dp"
+        android:hint="@string/book"
+        app:boxStrokeColor="@color/myColorLight"
+        app:endIconDrawable="@drawable/baseline_cancel_24"
+        app:endIconMode="custom"
+        app:endIconTint="@color/myColorLight"
+        app:hintTextColor="@color/myColorLight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:startIconDrawable="@drawable/baseline_menu_book_24"
+        app:startIconTint="@color/myColorLight">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/authorInput"
+        android:layout_width="260dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:hint="@string/author"
+        app:boxStrokeColor="@color/myColorLight"
+        app:endIconDrawable="@drawable/baseline_cancel_24"
+        app:endIconMode="custom"
+        app:endIconTint="@color/myColorLight"
+        app:hintTextColor="@color/myColorLight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookNameInput"
+        app:startIconDrawable="@drawable/baseline_person_2_24"
+        app:startIconTint="@color/myColorLight">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/priceInput"
+        android:layout_width="260dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:hint="@string/price"
+        android:inputType="numberDecimal"
+        app:boxStrokeColor="@color/myColorLight"
+        app:endIconDrawable="@drawable/baseline_cancel_24"
+        app:endIconMode="custom"
+        app:endIconTint="@color/myColorLight"
+        app:hintTextColor="@color/myColorLight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/authorInput">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/menu"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="260dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:hint="@string/genre"
+        app:boxStrokeColor="@color/myColorLight"
+        app:endIconTint="@color/myColorLight"
+        app:hintTextColor="@color/myColorLight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/priceInput">
+
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            app:simpleItemSelectedColor="@color/onMyColorContainerLightMild"
+            app:simpleItemSelectedRippleColor="@color/onMyColorContainerLightMild"
+            app:simpleItems="@array/genres" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/saveButton"
+        style="@style/FABStyleExtended"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="112dp"
+        android:contentDescription="@string/save_button"
+        android:text="@string/save"
+        android:textColor="@color/myColorLight"
+        app:icon="@drawable/baseline_save_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:maxImageSize="30dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dateInput"
+        android:layout_width="260dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:hint="@string/date"
+        app:boxStrokeColor="@color/myColorLight"
+        app:endIconDrawable="@drawable/baseline_cancel_24"
+        app:endIconMode="custom"
+        app:endIconTint="@color/myColorLight"
+        app:hintTextColor="@color/myColorLight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menu"
+        app:startIconDrawable="@drawable/baseline_calendar_month_24"
+        app:startIconTint="@color/myColorLight">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/openClock"
+        style="@style/FABStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="112dp"
+        android:contentDescription="@string/time_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:maxImageSize="35dp"
+        app:srcCompat="@drawable/baseline_access_time_24" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
